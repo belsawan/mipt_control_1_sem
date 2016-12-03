@@ -21,4 +21,7 @@ def perevod_any(chislo, base1, base2):
   return perevod(int(chislo, base1), base2)
 
 A = input().split()
+if int(A[1]) > 36:
+  print("Base > 36 !!!")
+  exit(-1)
 print(perevod_any(A[0].lower(), int(A[1]), int(A[2])))
