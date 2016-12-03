@@ -4,7 +4,7 @@ def spisok(N):
          a.append(input())
     return a
 
-def analiz(L):
+def spisok_poodinochke(L):
     m = []
     b = []
     for i in range(len(L)):
@@ -15,6 +15,10 @@ def analiz(L):
                 break
             else:
                 m.append(L[j])
+    return m
+def analiz(L):
+    m = spisok_poodinochke(L)
+    b=[]
     for u in m:
         s=0
         for y in L:
@@ -32,4 +36,5 @@ def analiz(L):
 
 N = int(input())
 a = spisok(N)
+print(spisok_poodinochke(a))
 print(analiz(a))
