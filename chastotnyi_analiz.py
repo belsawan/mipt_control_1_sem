@@ -38,3 +38,4 @@ N = int(input())
 a = spisok(N)
 print(spisok_poodinochke(a))
 print(analiz(a))
+'''asdasd'''
