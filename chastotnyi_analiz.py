@@ -5,23 +5,31 @@ def spisok(N):
     return a
 
 def analiz(L):
+    m = []
     b = []
-    for i in L:
+    for i in range(len(L)):
+        for j in range(len(L)):
+            if L[i] != L[j]:
+                continue
+            elif L[j] in m:
+                break
+            else:
+                m.append(L[j])
+    for u in m:
         s=0
-        for j in L:
-            if j == i:
+        for y in L:
+            if u == y:
                 s += 1
         b.append(s)
     return b
-# TODO нужно разобраться со списком; он выдаёт все номера для каждого товара
 
-"""def proverka(b):
-    m=0
+'''def proverka(b):
+    m = 0
     for i in b:
-        for"""
-    # FIXME make me work and to do main quest
+        for'''
+# FIXME осталось только самый конец доделать, я курить пошёл
 
 
-N=int(input())
-a=spisok(N)
+N = int(input())
+a = spisok(N)
 print(analiz(a))
