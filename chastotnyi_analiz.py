@@ -6,7 +6,6 @@ def spisok(N):
 
 def spisok_poodinochke(L):
     m = []
-    b = []
     for i in range(len(L)):
         for j in range(len(L)):
             if L[i] != L[j]:
@@ -18,24 +17,30 @@ def spisok_poodinochke(L):
     return m
 def analiz(L):
     m = spisok_poodinochke(L)
-    b=[]
+    b = []
     for u in m:
-        s=0
+        s = 0
         for y in L:
             if u == y:
                 s += 1
         b.append(s)
     return b
+'''def proverka(L):
+    b = analiz(L)
+    m = spisok_poodinochke(L)
+    for i in range(10):
+        u = b.count(i)
+        if u > 0:
+            for j in range(u):
+                tmp = b.index(u)
+                b.pop(tmp)
+                print(m[tmp])'''
 
-'''def proverka(b):
-    m = 0
-    for i in b:
-        for'''
-# FIXME осталось только самый конец доделать, я курить пошёл
+
+# FIXME без словарей трудна!
 
 
 N = int(input())
 a = spisok(N)
 print(spisok_poodinochke(a))
 print(analiz(a))
-'''asdasd'''
