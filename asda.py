@@ -1,0 +1,2 @@
+A='asdasd'
+print(A+'(')

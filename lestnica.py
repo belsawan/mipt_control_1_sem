@@ -20,4 +20,3 @@ Price=[None]+[int(x) for x in input().split()]
 Costs=stoimost(n, Price)
 path=shortest_path(n, Costs)
 print(path)
-'asjdhasjhdahjsd'
