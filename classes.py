@@ -22,15 +22,17 @@ class Smile:
         while a != 'end':
             if a == '+(':
                 self.str = self.additional(a[1:])
-                a=input()
+                print(self)
+                a = input()
             elif a == '+)':
                 self.str = self.additional(a[1:])
-                a=input()
+                print(self)
+                a = input()
             elif a == 'print':
                 print(self)
-                a=input()
+                a = input()
             elif a == 'status':
-                if proverka(self.str)==True:
+                if proverka(self.str):
                     print('nice')
                     a = input()
                 else:
